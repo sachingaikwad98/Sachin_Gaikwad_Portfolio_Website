@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+html{
+    scroll-behavior:smooth;
+}
+
+body {
+    background-color: black;
+    color: #ffff;
+    width: 100%;
+}
+
+/* ------------Navbar---------------- */
+.navbar {
+    padding: 15px 10%;
+   
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid blue; */
+    align-items: center;
+
+}
+
+.navbar nav img {
+    width: 10%;
+    height: 50px
+}
+
+.navbar nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    border: 2px solid;
+}
+
+.navbar nav ul li {
+    margin: 15px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #ffff;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+nav ul li a:active {
+    color: greenyellow;
+}
+
+nav ul li a:hover {
+    text-decoration: overline underline;
+    /* text-decoration: double; */
+    text-decoration-color: greenyellow;
+    text-decoration-style: solid;
+    color: gold;
+}
+
+nav img:hover {
+    transform: scale(0.7);
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+/* ------------Navbar---------------- */
+
+/* -----------------Intro ------------ */
+
+
+#animation{
+text-align: center;
+margin-top: 25px;
+display: flex;
+}
+
+#animation #dynamictext{
+    line-height: 60px;
+    height: 60px;
+    /* background: red; */
+    overflow: hidden;
+}
+
+#statictext{
+    font-size: 2rem;
+    font-family: 'Libre Baskerville', serif;
+    text-align: left;
+}
+
+#dynamictext li{
+list-style: none;
+font-size: 3rem;
+font-weight: 900;
+top: 0;
+position: relative;
+margin-left: -50px;
+color: greenyellow;
+animation: slide 6s steps(6) infinite;
+}
+@keyframes slide {
+    100%{
+        top:-360px;
+    }
+}
+
+
+#dynamictext li span{
+    position: relative;
+}
+
+#dynamictext li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background-color: black;
+    width: 100%;
+    border-left: 3px ridge white;
+    animation: typing 1s steps(15) infinite;
+}
+@keyframes typing{
+    100%{
+        left:100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+
+
+.Intro {
+    height: 80vh;
+    /* width:100%; */
+    /* border: 2px solid purple; */
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+}
+
+#devIntro {
+    width: 50%;
+}
+
+
+#devIntro p {
+    font-size: 2.5rem;
+    width: 100%;
+}
+
+#devIntro p:nth-child(3) {
+    font-size: 2.2ch;
+    text-align: center;
+    margin-top: 25px;
+}
+
+#devIntro p:nth-child(3) span {
+    color: gold;
+    font-size: 1em;
+}
+
+.designation {
+    border-left: 8px ridge greenyellow;
+    padding-left: 15px;
+    text-shadow: 0px 0px 25px greenyellow;
+
+}
+
+#devPhoto {
+    border-bottom: 7px ridge greenyellow;
+    border-right: 7px ridge greenyellow;
+    /* height: 166px; */
+    width: 50%;
+    padding:7px;
+    
+}
+
+#devPhoto:hover{
+    box-shadow: 5px 5px 50px 5px greenyellow;
+    transition: 0.5s;
+}
+
+#devPhoto img{
+    height: 100%;
+   
+}
+
+#devPhoto img:hover {
+    box-shadow: 5px 5px 50px 5px greenyellow;
+    transition: 0.5s;
+}
+
+/* ----------------------About----------------- */
+
+.about {
+    height: 70vh;
+    padding: 15px 10%;
+    display: flex;
+    box-shadow: 5PX 5PX 100PX 20PX gold;
+
+}
+
+.leftAbout {
+    width: 30%;
+    height: 70vh;
+    border-left: 7px ridge greenyellow;
+    border-bottom: 7px ridge greenyellow;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.rightAbout {
+    width: 70%;
+    margin-left: 25px;
+    font-size: 1.12rem;
+}
+
+.rightAbout>p {
+    font-size: 1rem;
+
+}
+
+.rightAbout p:nth-child(1) {
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Merriweather', serif;
+}
+
+.rightAbout p span {
+    color: gold;
+}
+
+.about_skills_education {
+    display: flex;
+}
+
+.skills {
+    /* border: 2px solid red; */
+    width: 22rem;
+    height: 50vh;
+    margin: 20px 15px;
+}
+
+.skills:hover {
+    box-shadow: 5px 5px 500px gold;
+    transition: 0.5s;
+}
+
+.skills>div:nth-child(1):hover {
+    transform: scale(1.12);
+    transition: 0.5s;
+    color: gold;
+}
+
+.skills>div:nth-child(1) {
+    text-align: center;
+    border-bottom: 3px solid gray;
+}
+
+.education {
+    /* border: 2px solid red; */
+    width: 22rem;
+    /* height: 40vh; */
+    margin: 20px 15px;
+}
+
+.education:hover {
+    box-shadow: 5px 5px 500px gold;
+    transition: 0.5s;
+
+}
+
+.education h2:hover {
+    transform: scale(1.12);
+    transition: 0.5s;
+    color: gold;
+}
+
+.education h2 {
+    text-align: center;
+    border-bottom: 3px solid gray;
+}
+
+.education1 ul li span:nth-child(1) {
+    color: gold;
+}
+
+.education1 ul li {
+    list-style: none;
+    padding: 10px;
+}
+
+/* ----------------------About----------------- */
+
+/* ---------------------My Work------------------- */
+
+.myWork {
+    padding: 15px 10%;
+    /* height: 70vh; */
+    /* border: 2px solid red ; */
+    box-shadow: 5PX 5PX 50PX 20PX greenyellow;
+
+}
+
+.myWork div {
+    padding: 25px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.workimg a img {
+    width: 100%;
+    height: 100%;
+    /* padding: 10px; */
+    /* justify-content: center; */
+    /* height: 40vh; */
+}
+
+.workimg {
+    width: 25%;
+    border: 5px ridge purple;
+    border-radius: 25px;
+    margin: 0 15px
+}
+
+#workImages {
+    display: flex;
+    justify-content: center;
+}
+
+.workImagesRow2{
+    display: flex;
+    justify-content: center; 
+}
+
+.workimgRow2{
+    width: 25%;
+    border: 5px ridge purple;
+    border-radius: 25px;
+    margin: 0 15px
+}
+.workimgRow2 a img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.workimg h3 {
+    text-align: center;
+}
+
+.workimgRow2 h3{
+    text-align: center;
+
+}
+
+.myWork img:hover {
+    transform: scale(.9);
+    ;
+}
+
+
+.myWork h1 {
+    text-align: center;
+    border-top: 5px ridge greenyellow;
+    border-right: 5px ridge greenyellow;
+    padding: 10px;
+}
+
+.myWork h1:hover {
+    border-left: 5px ridge greenyellow;
+    border-bottom: 5px ridge greenyellow;
+    border-top: none;
+    border-right: none;
+}
+
+/* -- -----------------Contact Me -------------- -- */
+
+.ContactMe {
+    padding: 15px 10%;
+    height: 75vh;
+    /* border: 2px solid red ; */
+    box-shadow: 5PX 5PX 50PX 20PX gOLD;
+}
+
+.ContactMe h1 {
+    padding: 50px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Contact {
+    display: flex;
+    border-left: 5px ridge greenyellow;
+    border-top: 5px ridge greenyellow;
+    padding: 20px;
+}
+
+.contactDetails {
+    flex-basis: 40%;
+}
+
+.contactDetails h3 {
+    text-align: center;
+    box-shadow: 5px 5px 255px 25px;
+}
+
+
+.contactForm {
+    /* flex-basis: 60%; */
+    /* border: 2px solid goldenrod; */
+    margin-left: 15px;
+}
+
+#send{
+    background-color: white; width:100px; margin-left: 35%; height: 25px; cursor: pointer; 
+}
+
+#send:hover{
+    transform: scale(1.2);
+    background-color: gold;
+}
+
+
+.contactForm form input {
+    background-color: grey;
+    font-weight: bolder;
+    height: 20px;
+    margin-top: 15px;
+    width: 90%;
+    border: 2px inset white;
+}
+
+
+
+.contactForm form input:hover {
+    border-color: gold;
+}
+
+.contactForm form fieldset {
+    padding: 10px;
+    border: 8px ridge white;
+    padding-left: 40px;
+}
+
+.contactForm form fieldset:hover {
+    border-color: gold;
+
+}
+
+::placeholder {
+    color: white;
+}
+
+.contactForm form textarea {
+    background-color: grey;
+    font-weight: bolder;
+    margin-top: 15px;
+    width: 90%;
+    border: 2px inset white;
+
+}
+
+.contactForm form textarea:hover {
+    border-color: gold;
+}
+
+.contactFormHeading {
+    text-align: center;
+}
+
+.contactFormHeading h3:nth-child(1) {
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 5px 5px 255px 15px;
+    /* width: 600px; */
+
+}
+
+.contactFormHeading h3:nth-child(2) {
+    margin-left: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 5px 5px 255px 25px;
+
+}
+
+#msg{
+    padding: 25px;
+    color: cyan;
+    font-size: large;
+}
+
+.contactDetails tr {
+    background-color: grey;
+}
+
+#profiles {
+    padding: 25px;
+    width: 87.5%;
+    text-align: center;
+    font-size: 1.3rem;
+
+}
+
+#profiles table {
+    border: 8px ridge white;
+    width: 100%;
+    padding: 25px;
+}
+
+#profiles table td {
+    border: 3px ridge white;
+}
+
+#profiles table tr td:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#profiles table:hover {
+    border-color: gold;
+}
+
+#contactRight {
+    margin-left: 10px;
+    flex-basis: 60%;
+    padding-left: 25px;
+}
+
+/* -- -----------------Contact Me Ends-------------- -- */
+
+/* -------------------------Footer ----------------------- */
+footer {
+    /* width: 100%; */
+    padding: 15px 10%;
+    height: 20VH;
+    box-shadow: 00PX 00PX 45PX 10PX greenyellow;
+    margin-bottom: 15PX;
+
+}
+
+footer p {
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+    font-size: largeR;
+
+}
+
+footer p:hover{
+transform: scale(1.1);
+}
+/* -------------------------Footer Ends----------------------- */
+
+/* --------------------Responsiveness------------------- */
+
+@media only screen and (max-width: 1450px){
+    #devPhoto img{
+        width:500px;
+    }
+
+    #devIntro p {
+        font-size: 2.9rem;
+    }
+
+    #devIntro p:nth-child(3) {
+        font-size: 2.5ch;
+    }
+}
+@media only screen and (max-width: 1300px){
+    #devPhoto img{
+        width:480px;
+        margin-top: 40px;
+        /* visibility: hidden; */
+
+    }
+}
+
+@media only screen and (max-width: 1220px){
+    #devPhoto img{
+        width:400px;
+        margin: 25px;
+        height:380px
+
+    }
+}
+
+@media only screen and (max-width: 1110px){
+    #devPhoto img{
+        width:350px;
+        margin: 25px;
+        height:380px
+
+    }
+}
+
+@media only screen and (max-width: 950px){
+    #devPhoto img{
+        width:300px;
+        margin: 25px;
+        height:380px
+
+    }
+}
+
+@media only screen and (max-width: 500px){
+    #devPhoto img{
+        visibility: hidden;
+
+    }
+}
+
+
+
+
